@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="//in.uni-weimar.de/fs/home/bm/s/nidu4758/desktop/OOMPE H01/bo-fbb-informatik.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:////in.uni-weimar.de/fs/home/bm/s/nidu4758/desktop/OOMPE%20H01/bo-fbb-informatik-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
