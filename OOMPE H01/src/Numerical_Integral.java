@@ -26,13 +26,13 @@ public class Numerical_Integral {
 		this.Fn=function;
 		
 		this.p01.setColor("black");
-		this.p01.setLinewidth(15);
+		this.p01.setLinewidth(6);
 		
 		this.p02.setColor("blue");
-		this.p02.setLinewidth(15);
+		this.p02.setLinewidth(6);
 		
 		this.p03.setColor("green");
-		this.p03.setLinewidth(15);
+		this.p03.setLinewidth(6);
 
 	}
 	void plot(Viewer v) {

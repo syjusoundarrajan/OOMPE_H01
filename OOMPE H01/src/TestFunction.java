@@ -22,7 +22,7 @@ public class TestFunction {
 	    //This is the actual function that is to used in our plot
 		UserFunction Fn=new UserFunction("2*pow(sin(2*(PI)*2*t),2)+1.5*pow(cos(2*(PI)*2.987*t+0.314),2)","t");    
     
-	    //The result obtained when calculating the integration by manual caluculation is given as follows.     
+	    //The result obtained when calculating the integration by manual calculation is given as follows.     
 		double manualresult=34.976;
             
 	    //Obtaining the numerical integral with the listed method01 in the question.
@@ -30,20 +30,30 @@ public class TestFunction {
              double ans01=n01.y0AsHeight(200);
              System.out.println("Answer value when y0 is taken as height for the area between x0 and x1: "+ans01);        
              n01.plot(v1);
+             
+             double obtained01=ans01;
+             System.out.println("Asolute Error in relation to the manual calculated integral in method1 = "+(manualresult-obtained01));
+             System.out.println("Relative Error in relation to the manual calculated integral in method1 = "+Math.abs((manualresult-obtained01)*100/manualresult)+"%");
+             
+             
          
          //Obtaining the numerical integral with the listed method02 in the question.
              Numerical_Integral n02=new Numerical_Integral(0, 20, Fn);
              double ans02=n02.yAsMeanValueForArean(200);
              System.out.println("Answer value when the mean value from y0 and y1 is taken as the value for the area between x0 and x1 = "+ans02);
              n02.plot(v2);
-            
-             double obtained=ans02;
+             double obtained02=ans02;
+             System.out.println("Asolute Error in relation to the manual calculated integral in method2 = "+(manualresult-obtained01));
+             System.out.println("Relative Error in relation to the manual calculated integral in method2 = "+Math.abs((manualresult-obtained01)*100/manualresult)+"%");
              
          //Obtaining the numerical integral with the listed method01 in the question.   
              Numerical_Integral n03=new Numerical_Integral(0, 20, Fn);
              double ans03=n03.linearInterpolation(200);
              System.out.println("Linear interpolation between two consecutive points = "+ans03);
              n03.plot(v3);
+             double obtained03=ans03;
+             System.out.println("Asolute Error in relation to the manual calculated integral in method3 = "+(manualresult-obtained03));
+             System.out.println("Relative Error in relation to the manual calculated integral in method3 = "+Math.abs((manualresult-obtained03)*100/manualresult)+"%");
              
          //Atlast visualizing of our obtained above results in our created viewers.
              v1.setVisible(true);
@@ -51,8 +61,7 @@ public class TestFunction {
              v3.setVisible(true);
          
              
-             System.out.println("Asolute Error in relation to the manual calculated integral = "+(manualresult-obtained));
-             System.out.println("Relative Error in relation to the manual calculated integral = "+Math.abs((manualresult-obtained)*100/manualresult)+"%");
+             
 	}
      		
 }
